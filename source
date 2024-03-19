@@ -6703,6 +6703,8 @@ addcmd('gametp',{'gameteleport'},function(args, speaker)
 end)
 
 addcmd("rejoin", {"rj"}, function(args, speaker)
+	notify('Rejoin', 'Rejoining!', 2)
+	wait(2.5)
 	if #Players:GetPlayers() <= 1 then
 		Players.LocalPlayer:Kick("\nRejoining...")
 		wait()

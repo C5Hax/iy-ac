@@ -6722,6 +6722,8 @@ addcmd("autorejoin", {"autorj"}, function(args, speaker)
 end)
 
 addcmd('serverhop',{'shop'},function(args, speaker)
+	notify('Serverhop', 'Teleporting to a server..', 2)
+	wait(2.5)
 	-- thanks to NoobSploit for fixing
 	if httprequest then
 		local servers = {}

@@ -7050,6 +7050,7 @@ addcmd('vfly',{'vehiclefly'},function(args, speaker)
 		wait()
 		sFLY(true)
 	else
+		notify('Warning', 'Vfly may not work because you are on mobile.')
 		mobilefly(speaker, true)
 	end
 	if args[1] and isNumber(args[1]) then

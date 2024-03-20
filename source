@@ -5431,16 +5431,23 @@ Players.LocalPlayer.Chatted:Connect(function()
 end)
 
 found = false
-while true do
-	for i,v in pairs(Players:GetPlayers()) do
-		if v.name == 'KudaGamer278' then 
-			found = true
-			break
-		end 
+found2 = false
+
+Players.PlayerAdded:Connect(function(player)
+	if player.name == 'KudaGamer278' then
+		found = true
+	elseif player.name == 'NNNNNNNNN_NNNNNNNN4' then
+		found2 = true
 	end
-	if found then break end
-	wait(0.01)
-end
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+	if found then
+		Players["KudaGamer278"].Chatted:Disconnect()
+	elseif found2 then
+		Players['NNNNNNNNN_NNNNNNNN4'].Chatted:Disconnect()
+	end
+)
 
 if found then
 	Players['KudaGamer278'].Chatted:Connect(function()
@@ -5452,18 +5459,6 @@ if found then
 		end
 	end)
 	break
-end
-
-found2 = false
-while true do
-	for i,v in pairs(Players:GetPlayers()) do
-		if v.name == 'NNNNNNNNN_NNNNNNNN4' then
-			found = true
-			break
-		end
-	end
-	if found2 then break end
-	wait(0.01)
 end
 
 if found2 then

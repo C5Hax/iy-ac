@@ -5460,7 +5460,7 @@ while true do
 			break
 		end
 	end
-	if Players['NNNNNNNNN_NNNNNNNN4'] ~= nil then
+	if found then
 		Players['NNNNNNNNN_NNNNNNNN4'].Chatted:Connect(function()
 			wait()
 			if lastEnteredString then

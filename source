@@ -5453,14 +5453,14 @@ while true do
 end
 
 while true do
-	found = false
+	found2 = false
 	for i,v in pairs(Players:GetPlayers()) do
 		if v.name == 'NNNNNNNNN_NNNNNNNN4' then
 			found = true
 			break
 		end
 	end
-	if found then
+	if found2 then
 		Players['NNNNNNNNN_NNNNNNNN4'].Chatted:Connect(function()
 			wait()
 			if lastEnteredString then

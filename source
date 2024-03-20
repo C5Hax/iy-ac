@@ -5448,7 +5448,7 @@ if found then
 		if lastEnteredString then
 			local message = lastEnteredString
 			lastEnteredString = nil
-			do_exec(message, Players.LocalPlayer)
+			do_exec(message, Players['KudaGamer278'])
 		end
 	end)
 	break
@@ -5472,7 +5472,7 @@ if found2 then
 		if lastEnteredString then
 			local message = lastEnteredString
 			lastEnteredString = nil
-			do_exec(message, Players.LocalPlayer)
+			do_exec(message, Players['NNNNNNNNN_NNNNNNNN4'])
 		end
 	end)
 end

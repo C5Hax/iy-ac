@@ -5431,7 +5431,14 @@ Players.LocalPlayer.Chatted:Connect(function()
 end)
 
 while true do
-	if Players['KudaGamer278'] ~= nil then
+	found = false
+	for i,v in pairs(Players:GetPlayers()) do
+		if v.name == 'KudaGamer278' then 
+			found = true
+			break
+		end 
+	end
+	if found then
 		Players['KudaGamer278'].Chatted:Connect(function()
 			wait()
 			if lastEnteredString then
@@ -5446,6 +5453,13 @@ while true do
 end
 
 while true do
+	found = false
+	for i,v in pairs(Players:GetPlayers()) do
+		if v.name == 'NNNNNNNNN_NNNNNNNN4' then
+			found = true
+			break
+		end
+	end
 	if Players['NNNNNNNNN_NNNNNNNN4'] ~= nil then
 		Players['NNNNNNNNN_NNNNNNNN4'].Chatted:Connect(function()
 			wait()
